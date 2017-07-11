@@ -47,3 +47,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
+  - deploy.sh
+  - generate_site.sh
+  - deploy_key.enc
+  - .gitignore

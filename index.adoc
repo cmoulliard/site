@@ -4,7 +4,7 @@
 ++++
 <div class="jumbotron jumbotron-fluid">
     <h1 class="display-4">Bootstrap your Spring project</h1>
-    <p class="lead">Cras justo odio, dapibus ac facilisis in, egeeeeeeestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor maauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p class="lead">Cras justo odio, dapibus ac facilisis in, eg11111111stas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor maauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     <p><a class="btn btn-lg btn-success" href="#" role="button">Start</a></p>
 </div>
 ++++
