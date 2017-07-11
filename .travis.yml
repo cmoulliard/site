@@ -6,7 +6,7 @@ sudo: false
 before_script:
 - chmod +x ./deploy.sh
 before_install:
-- openssl aes-256-cbc -K $encrypted_fb34ba69d56b_key -iv $encrypted_fb34ba69d56b_iv -in deploy_key.enc -out ~\/.ssh/deploy_key -d
+- openssl aes-256-cbc -K $encrypted_fb34ba69d56b_key -iv $encrypted_fb34ba69d56b_iv -in deploy_key.enc -out deploy_key -d
 - git config --global user.name "Travis CI - Charles"
 - git config --global user.email "ch007m@gmail.com"
 script: "./deploy.sh"
