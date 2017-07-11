@@ -1,12 +1,14 @@
 language: ruby
 rvm:
-- 2.2.0
+- 2.3.1
 sudo: false
+before_script:
+- chmod +x ./generate_site.sh
 before_install:
+- openssl aes-256-cbc -K $encrypted_fb34ba69d56b_key -iv $encrypted_fb34ba69d56b_iv -in deploy_key.enc -out ~\/.ssh/deploy_key -d
 - git config --global user.name "Travis CI - Charles"
 - git config --global user.email "ch007m@gmail.com"
-#script: bundle exec rake deploy
-script: ./generate_site.sh
+script: "./generate_site.sh"
 env:
   global:
-    secure: Wo2qzky594z1Lk5UUzWdsHUILta2C9EHeq9qJWuQpAGr/+a4bvC4leoOgxK8gBmHUkWRwiefy+LP7TrbtAhhwNzUHFZHtWJZiUuLgujsLVqqQO69rd6U0Mm5g79luwFjoyEfVjAxEueE62zDuHbCCJmxyIGy8gUmWPaF+LwOJfVCftFUCuBgqFX0sHwfMwUh3miqHQ0Atj3ImVWw3v824qLmm79W1wLkA0IUyg8eFLRb8aGNLvDBxTy5RQJmJijTsM2SvHjgO9I4kPAZuEPpcZPlcJgF1IWRSJo3xpLYiqQGDgHdcZMeRZ1pyNeNFqW1Pkap6FxNNK9RZ0Zr004cWNhzMT1QU6/ISDj/jmBMl13e92GequTNI/JDGvWcyWnHUV2Ct5Vjk7ZEDopodYjTftgyAJYd7sw8j3SCmwkKq25eXMRcnKWMVTIjPPvcIDPFG9mq7qjL1f7zkIuRKsxYuYzSkCjYOnyghLQ3nYxp708v/oIbBZK2ObF/Dfn4AxkF2wkPbRcZAVVUDNK04KQLak5m7Iy0VLYRGroEeyOe+7U2B3sQfA4qllS8sYjSPdy3CY1x+At2c90g5nb+Tjxb9Kh+y19PvFpz9D4ZeAN5/oD3Oti17tDMN4vEj1BQvbtwKgbRfVJzbsEjhvW9E7/su6rFrlmU38CCVrEaXzpg4y8=
+  - ENCRYPTION_LABEL: fb34ba69d56b
