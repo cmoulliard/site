@@ -22,9 +22,6 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/"
 url: "https://cmoulliard.github.io/site"
 
-# Build settings
-markdown: kramdown
-#theme: minima
 plugins:
   - jekyll-feed
   - jekyll-asciidoc
@@ -45,9 +42,6 @@ plugins:
 exclude:
   - README.md
   - Gemfile
-  - Gemfile.lock
-  - Rakefile
   - deploy.sh
   - generate_site.sh
-  - deploy_key.enc
   - .gitignore
