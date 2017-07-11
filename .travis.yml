@@ -13,3 +13,4 @@ script: "./deploy.sh"
 env:
   global:
   - ENCRYPTION_LABEL: fb34ba69d56b
+  - COMMIT_AUTHOR_EMAIL: "ch007m@gmail.com"
