@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang=" en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Your awesome title</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu...">
+
+  <link rel="shortcut icon" src="https://cmoulliard.github.io/site//assets/img/snowdrop_icon_16px.ico">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cmoulliard.github.io/site//assets/bootstrap.min.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="https://cmoulliard.github.io/site//assets/narrow-jumbotron.css">
+
+  <link rel="stylesheet" href="https://cmoulliard.github.io/site//assets/main.css">
+  <link rel="canonical" href="https://cmoulliard.github.io/site/search-guides/">
+  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="https://cmoulliard.github.io/site//feed.xml">
+  
+  
+</head>
+
+<body>
+<div class="container">
+  <div class="header clearfix">
+    <nav>
+        <ul class="nav navbar-default nav-pills float-right">
+            <li class="nav-item">
+                <a class="nav-link " href="https://cmoulliard.github.io/site//index.html">Overview <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="https://cmoulliard.github.io/site//search-guides">Guides</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="https://cmoulliard.github.io/site//about">About</a>
+            </li>
+        </ul>
+    </nav>
+    <img src="https://cmoulliard.github.io/site//assets/img/snowdrop-logo.png" width="200" height="100"/>
+</div>
+  <div class="paragraph">
+<p>Whatever you&#8217;re building, these guides are designed to get you productive as quickly as possible –
+using the latest Spring project releases and techniques as recommended by the Spring team.
+Have a suggestion for a new guide? Let us know at @snowdrop.</p>
+</div>
+  <hr/>
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-12">
+      <input type="search" id="search" value="" class="form-control"
+             placeholder="Search using Fuzzy searching">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <table class="table table-borderless" id="table">
+        <tbody>
+        <tr>
+    <td>
+        <a href="https://cmoulliard.github.io/site//guides/http-api">HTTP Api</a>
+        <p>Mission to expose a REST Greeting endpoint using SpringBoot and Apache Tomcat in embedded mode</p>
+    </td>
+    <td>
+        <a href="https://github.com/snowdrop/spring-boot-http-secured-booster">Secured HTTP Api</a>
+        <p>Mission to expose a REST Greeting endpoint using SpringBoot & Secured by Red Hat SSO</p>
+    </td>
+    <td>
+        <a href="https://github.com/snowdrop/spring-boot-crud-booster">JPA</a>
+        <p>Mission to play with Spring Boot & JPA</p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <a href="https://github.com/snowdrop/spring-boot-crud-booster">JPA</a>
+        <p>Mission to play with Spring Boot & JPA</p>
+    </td>
+    <td>
+        <a href="https://github.com/snowdrop/spring-boot-configmap-booster">Config Map</a>
+        <p>Quickstart to expose a REST Greeting endpoint using Spring Boot where the message is
+            defined
+            as a Kubernetes Config Map property</p>
+    </td>
+    <td>
+        <a href="https://github.com/snowdrop/spring-boot-health-check-booster">Health Check</a>
+        <p>Quickstart to demonstrate OpenShift health probes working with Spring Boot Actuator</p>
+    </td>
+</tr>
+<tr>
+    <td>
+        <a href="https://github.com/snowdrop/spring-boot-circuit-breaker-booster">Circuit
+            Breaker</a>
+        <p>Service implementing Hystrix Circuit Breaker</p>
+    </td>
+    <td>
+        <a href="https://github.com/snowdrop/spring-boot-blank-booster">Blank</a>
+        <p>Blank Spring Boot mission</p>
+    </td>
+</tr>
+        </tbody>
+      </table>
+      <hr>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; Red Hat 2017</p>
+  </footer>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cmoulliard.github.io/site//assets/js/jquery-3.2.1.min.js"></script>
+<script src="https://cmoulliard.github.io/site//assets/js/tether-1.4.0.min.js"></script>
+<script src="https://cmoulliard.github.io/site//assets/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="https://cmoulliard.github.io/site//assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://cmoulliard.github.io/site//assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="https://cmoulliard.github.io/site//assets/js/jquery-searchable-1.1.0.min.js"></script>
+<script>
+    $(function () {
+        $('#table').searchable({
+            striped: true,
+            searchType: 'fuzzy',
+            selector: 'tbody tr td',
+            childSelector: 'a'
+        });
+    });
+</script>
+</body>
+</html>

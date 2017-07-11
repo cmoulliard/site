@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang=" en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>http-api</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu...">
+
+  <link rel="shortcut icon" src="https://cmoulliard.github.io/site//assets/img/snowdrop_icon_16px.ico">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cmoulliard.github.io/site//assets/bootstrap.min.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="https://cmoulliard.github.io/site//assets/narrow-jumbotron.css">
+
+  <link rel="stylesheet" href="https://cmoulliard.github.io/site//assets/main.css">
+  <link rel="canonical" href="https://cmoulliard.github.io/site/guides/http-api">
+  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="https://cmoulliard.github.io/site//feed.xml">
+  
+  
+</head>
+
+<body>
+<div class="container">
+    <div class="header clearfix">
+    <nav>
+        <ul class="nav navbar-default nav-pills float-right">
+            <li class="nav-item">
+                <a class="nav-link " href="https://cmoulliard.github.io/site//index.html">Overview <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="https://cmoulliard.github.io/site//search-guides">Guides</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="https://cmoulliard.github.io/site//about">About</a>
+            </li>
+        </ul>
+    </nav>
+    <img src="https://cmoulliard.github.io/site//assets/img/snowdrop-logo.png" width="200" height="100"/>
+</div>
+    <div class="container">
+        <div class="sect2">
+<h3 id="spring-boot-http-api-booster">Spring Boot HTTP Api Booster</h3>
+<div class="paragraph">
+<p><a href="https://github.com/snowdrop/spring-boot-http-secured-booster">Git Project of the Spring HTTP API Quickstart</a></p>
+</div>
+<div class="paragraph">
+<p>The {name-mission-http-api} Mission provides a basic example of mapping business operations to a remote procedure call endpoint over HTTP using a REST framework. This corresponds to <a href="https://martinfowler.com/articles/richardsonMaturityModel.html#level0">Level 0 in the Richardson Maturity Model</a>. Creating an HTTP endpoint using REST and its underlying principals to define your API enables you to quickly prototype and design your API in a flexible manner.</p>
+</div>
+<div class="paragraph">
+<p>More background information on REST is available in <a href="#about_rest">REST Resources</a>.</p>
+</div>
+<div class="paragraph">
+<p>This is an introduction to the mechanics of opening a service that is called remotely. Specifically, this booster is an application that allows a user to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Execute an HTTP <code>GET</code> request on the <code>api/greeting</code> endpoint.</p>
+</li>
+<li>
+<p>Receive a response in JSON format with a payload consisting of the <code>Hello, World!</code> String.</p>
+</li>
+<li>
+<p>Execute an HTTP <code>GET</code> request on the <code>api/greeting</code> endpoint while passing in a String argument. This uses the <code>name</code> request parameter in the query string.</p>
+</li>
+<li>
+<p>Receive a response in JSON format with a payload of <code>Hello, $name!</code> with <code>$name</code> replaced by the value of the <code>name</code> parameter passed into the request.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Design Tradeoffs</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pros</th>
+<th class="tableblock halign-left valign-top">Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>Fast prototyping</p>
+</li>
+<li>
+<p>Flexible API Design</p>
+</li>
+<li>
+<p>HTTP endpoints allow clients to be language agnostic</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>As an application or service matures, the {name-mission-http-api} approach may not scale well to properly support a clean API design or use cases involving database interactions. Any operations involving shared, mutable state must be integrated with an appropriate backing datastore. All requests handled by an API designed in this manner will be scoped only to the container servicing the request. Therefore there is no guarantee that subsequent requests will be served by the same container.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="rest_build_and_deploy_booster">Build and Deploy Your Booster</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>TODO &#8594; add content of "include::booster-deploy-openshift-online.adoc"</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="deploy-using-the-code-oc-code-cli-client">Deploy Using the <code>oc</code> CLI Client</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>TODO &#8594; add content of "include::oc-client-deploy-booster-download-note.adoc"</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Get your authentication token for using the <code>oc</code> CLI client with your {OpenShiftOnline} account. You can find this in the <em>Command Line Tools</em> section your {OpenShiftOnline} Web console.</p>
+</li>
+<li>
+<p>Authenticate your <code>oc</code> CLI client with your {OpenShiftOnline} account by using your authentication token.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-bash" data-lang="bash">$ oc login {link-oso-auth} --token=MYTOKEN</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a new project in {OpenShiftOnline}.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-bash" data-lang="bash">$ oc new-project {project-name}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Navigate to the root directory of your booster.</p>
+</li>
+<li>
+<p>Use maven to start the deployment to {OpenShiftOnline}.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-bash" data-lang="bash">$ mvn clean fabric8:deploy -Popenshift</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command uses the Fabric8 Maven Plugin to launch the S2I process on {OpenShiftOnline} and to start the pod.</p>
+</div>
+</li>
+<li>
+<p>Check the status of your booster and ensure your pod is running.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-bash" data-lang="bash">$ oc get pods -w
+NAME                             READY     STATUS      RESTARTS   AGE
+{app-name}-1-aaaaa               1/1       Running     0          58s
+{app-name}-s2i-1-build           0/1       Completed   0          2m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You <code>app1</code> pod should have a status of <code>Running</code> once its fully deployed and started.</p>
+</div>
+</li>
+<li>
+<p>Once your booster is deployed and started, determine its route.</p>
+<div class="listingblock">
+<div class="title">Example Route Information</div>
+<div class="content">
+<pre class="highlight nowrap"><code class="language-bash" data-lang="bash">$ oc get routes
+NAME                 HOST/PORT                                                     PATH      SERVICES        PORT      TERMINATION
+{app-name}         {app-name}-{project-name}.1ab5.starter-us-east-1.openshiftapps.com      {app-name}      8080</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A pod&#8217;s route information gives you the base URL which you use to access it. In the example above, you would use <code><a href="http://{app-name}-{project-name}.1ab5.starter-us-east-1.openshiftapps.com" class="bare">http://{app-name}-{project-name}.1ab5.starter-us-east-1.openshiftapps.com</a></code> as the base URL to access the application.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deploy-your-booster-to-a-openshiftlocal">Deploy your Booster to a {OpenShiftLocal}</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Before you can use a {OpenShiftLocal}, you need to have it installed, configured, and running. You can find more details in <a href="{link-openshift-local-guide}">{openshift-local-guide-name}</a>.</p>
+</li>
+<li>
+<p>Once you have a {OpenShiftLocal} running, check the console output for the URL you can use to access it.</p>
+<div class="listingblock">
+<div class="title">Example Console Output from a {OpenShiftLocal} Startup</div>
+<div class="content">
+<pre class="highlight nowrap"><code class="language-bash" data-lang="bash">...
+-- Removing temporary directory ... OK
+-- Server Information ...
+   OpenShift server started.
+   The server is accessible via web console at:
+       https://192.168.99.100:8443
+
+   You are logged in as:
+       User:     developer
+       Password: developer
+
+   To login as administrator:
+       oc login -u system:admin</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deploy-using-launcher">Deploy Using {launcher}</h3>
+<div class="paragraph">
+<p>Once you have the {launcher} application <a href="{link-launcher-openshift-local-install-guide}">installed and configured</a>,
+navigate to it in {OpenShiftLocal} and use it to create and launch your booster.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deploy-using-the-code-oc-code-cli-client-2">Deploy Using the <code>oc</code> CLI Client</h3>
+<div class="paragraph">
+<p>You can deploy your booster to {OpenShiftLocal} by following the same process as deploying a booster to {OpenShiftOnline}, but instead of using a {OpenShiftOnline} URL, use your {OpenShiftLocal} URL to access the Web console and with the <code>oc</code> CLI client.</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interact-with-the-unmodified-springboot-booster">Interact with the Unmodified {SpringBoot} Booster</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The booster provides a default HTTP endpoint that accepts GET requests.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use <code>curl</code> to execute a <code>GET</code> request against the booster. You can also use a browser to do this.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-bash" data-lang="bash">$ curl http://{app-name}-{project-name}.1ab5.starter-us-east-1.openshiftapps.com/api/greeting
+{"content":"Hello, World!"}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use <code>curl</code> to execute a <code>GET</code> request with the <code>name</code> URL parameter against the booster. You can also use a browser to do this.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-bash" data-lang="bash">$ curl http://{app-name}-{project-name}.1ab5.starter-us-east-1.openshiftapps.com/api/greeting?name=Sarah
+{"content":"Hello, Sarah!"}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TODO &#8594; add content of "include::rest-level-0-mission-form-note.adoc"</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="running-integration-tests">Running Integration Tests</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This booster contains a set of integration tests.
+To run them, you must be connected to an OpenShift instance and select the project that will be used for testing.</p>
+</div>
+<div class="paragraph">
+<p>To run the integration tests, execute the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ mvn clean verify -Popenshift,openshift-it</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="about_rest">REST Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>More background and related information on REST can be found here:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">Architectural Styles and
+the Design of Network-based Software Architectures - Representational State Transfer (REST)</a></p>
+</li>
+<li>
+<p><a href="https://martinfowler.com/articles/richardsonMaturityModel.html">Richardson Maturity Model</a></p>
+</li>
+<li>
+<p><a href="https://www.jcp.org/en/jsr/detail?id=311">JSR 311: JAX-RS: The JavaTM API for RESTful Web Services</a></p>
+</li>
+<li>
+<p><a href="{link-http-api-level-0-spring-boot-tomcat-booster}">{mission-http-api-spring-boot-tomcat-guide-name}</a></p>
+</li>
+<li>
+<p><a href="{link-http-api-level-0-vertx-booster}">{mission-http-api-vertx-guide-name}</a></p>
+</li>
+<li>
+<p><a href="{link-http-api-level-0-wf-swarm-booster}">{mission-http-api-wf-swarm-guide-name}</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+    </div>
+    <footer class="footer">
+        <p>&copy; Red Hat 2017</p>
+    </footer>
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cmoulliard.github.io/site//assets/js/jquery-3.2.1.min.js"></script>
+<script src="https://cmoulliard.github.io/site//assets/js/tether-1.4.0.min.js"></script>
+<script src="https://cmoulliard.github.io/site//assets/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="https://cmoulliard.github.io/site//assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://cmoulliard.github.io/site//assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
