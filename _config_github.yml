@@ -44,3 +44,6 @@ plugins:
 
 exclude:
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
