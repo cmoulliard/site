@@ -3,7 +3,7 @@
 rm -rf _site
 jekyll build --config _config_github.yml
 rm -rf gh-pages && git clone https://github.com/cmoulliard/site.git gh-pages
-git config --global user.name "Travis CI - Charles"
+git config --global user.name "cmoulliard"
 git config --global user.email "ch007m@gmail.com"
 cd gh-pages && git checkout gh-pages
 git rm -rf .
