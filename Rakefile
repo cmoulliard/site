@@ -8,8 +8,8 @@ Rake::Jekyll::GitDeployTask.new(:deploy) do |t|
 
 # Run this command to build the site.
   t.build_script = ->(dest_dir) {
-    puts "\nClean gh-pages branch ..."
-    sh "git rm -rf . &>/dev/null || true"
+    # puts "\nClean gh-pages branch ..."
+    # sh "git rm -rf . &>/dev/null || true"
     puts "\nRunning Jekyll..."
     sh "bundle exec jekyll build --config _config_github.yml"
   }
