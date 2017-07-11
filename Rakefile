@@ -11,6 +11,7 @@ Rake::Jekyll::GitDeployTask.new(:deploy) do |t|
     # puts "\nClean gh-pages branch ..."
     # sh "git rm -rf . &>/dev/null || true"
     puts "\nRunning Jekyll..."
+    sh "bundle exec jekyll clean"
     sh "bundle exec jekyll build --config _config_github.yml"
   }
 end
